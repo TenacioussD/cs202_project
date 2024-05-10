@@ -36,11 +36,12 @@ phonebook_dict.update({"Dr. Patrick": "555-666"})
 print("\nPrinting Dr. Patricks phone number...")
 print(phonebook_dict["Dr. Patrick"])
 
+print("\n")
+
 text = "Hello, I am trying to learn Python, however I am having difficulty"
 
 
 def func_name(text):
-    text = "Hello, I am trying to learn Python, however I am having difficulty"
     counts = dict()
     words = text.split()
     unwanted_chars = ".,-"
@@ -61,3 +62,49 @@ word_counts = OrderedDict(func_name(text))
 
 # Print the OrderedDict
 print(word_counts)
+print("\n")
+
+
+def func_name1(str):
+    str = "Hello, hello, hello, hello, how are you?"
+    count = {}
+    unwanted_chars = ".,-"
+    for raw_word in str.split():
+        word = raw_word.strip(unwanted_chars)
+        count[word] = count.get(word, 0) + 1
+    return count
+
+
+print(func_name1(str))
+print("\n")
+
+str = "1 2 3 4 5 5 4 3 2 1"
+
+
+def func_name2(str):
+    unwanted_chars = ".,-"
+    count = {word.strip(unwanted_chars): str.split().count(word) for word in set(str.split())}
+    return count
+
+
+print(func_name2(str))
+print("\n")
+
+list_of_dicts = [{'Adam': 20}, {'Bob': 21}, {'Kate': 32, 'Dave': 18}]
+list_of_dicts = {key: value for dict in list_of_dicts for key, value in dict.items()}
+print(list_of_dicts)
+
+course_code = ['CS201', 'CS202', 'CS203']
+course_tutor = ['Adam', 'Ben', 'Sam']
+new_dict = {course_code: course_tutor for course_code, course_tutor in zip(course_code, course_tutor)}
+print(new_dict)
+
+values: tuple = (1, 2, 4, "Geek")
+print(values)
+
+mytuple = ("Geeks",)
+print(type(mytuple))
+
+# NOT a tuple
+mytuple = ("Geeks")
+print(type(mytuple))
