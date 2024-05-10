@@ -1,7 +1,28 @@
-def phonebook_lookup(filename):
-    phonebook_dict = dict()
-    unwanted_chars = ".,- "
-      with open(filename,'r') as f:
-            for line in f:
-raw_words = line.split()   phonebook_dict[raw_words[0].strip(unwanted_chars)] = raw_words[1].strip(unwanted_chars)
-      return(phonebook_dict)
+Allison-Neu 555-8200
+Bob 555-4344
+Burns 555-0001
+Canine 555-7201
+Therapy-Institute 555-2849
+Cathy-Neu 555-2362
+City-Bureau 555-BOOT
+Julius-Hibbert 555-3642
+Nick-Riviera 555-NICK
+Jack-Neu 555-7666
+Jeb 555-5543
+Jennifer 555-3652
+Ken 555-8752
+Lionel 555-5299
+MAD 555-8628
+Marital 555-1680
+Marvin 555-3700
+Moe 7648-4377
+Szyslak 555-0000
+Tavern 555-1239
+Plow 555-3226
+Metro 555-5680
+Flanders 555-8904
+Bureau 555-2668
+ORB 1-800-DOCT
+Ray-Pizza 555-PIZA
+Otto's 555-8821
+Plow-King 555-4796
